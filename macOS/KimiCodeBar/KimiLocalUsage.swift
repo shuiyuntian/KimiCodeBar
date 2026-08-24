@@ -66,7 +66,7 @@ private let scanDayKeyFormatter: DateFormatter = {
 /// 原则：只读，绝不修改官方任何文件；不触碰 credentials；尊重 KIMI_CODE_HOME。
 /// 策略：增量扫描 — 记录每个文件的字节偏移量，仅读取新增内容；
 /// 状态持久化到 Application Support，重启后从上次位置继续；
-/// 结果内存缓存 + 3 分钟节流；扫描在后台线程执行，不阻塞 UI。
+/// 每次面板打开都扫描（增量开销极低），后台线程执行，不阻塞 UI。
 @MainActor
 final class KimiLocalUsageService: ObservableObject {
     static let shared = KimiLocalUsageService()
@@ -77,15 +77,12 @@ final class KimiLocalUsageService: ObservableObject {
     @Published private(set) var isLoading = false
     @Published private(set) var hasScanned = false
 
-    private var lastScanDate: Date?
-    private let throttleInterval: TimeInterval = 180
-
     private init() {}
 
-    /// 面板打开时调用；3 分钟内重复打开不重复扫描
+    /// 面板打开时调用：增量扫描（未变化的文件零 IO 跳过，开销极低），
+    /// 每次面板打开都直接统计一次，保证数据实时；isLoading 守卫防止并发扫描。
     func refreshIfNeeded() {
         guard !isLoading else { return }
-        if let lastScanDate, Date().timeIntervalSince(lastScanDate) < throttleInterval { return }
         isLoading = true
         Task {
             let (scanned, hours, _) = await Task.detached(priority: .utility) {
@@ -95,7 +92,6 @@ final class KimiLocalUsageService: ObservableObject {
             todayHours = hours
             hasScanned = true
             isLoading = false
-            lastScanDate = Date()
         }
     }
 

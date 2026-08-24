@@ -1229,7 +1229,7 @@ struct KimiMenu: View {
                 model.refresh(showsLoading: false)
                 // 面板打开时探测 App 新版本，只更新状态、不弹窗
                 SparkleUpdater.shared.checkForUpdateInformation()
-                // 面板打开时扫描一次本机消耗量（后台线程，3 分钟节流）
+                // 面板打开时扫描一次本机消耗量（后台线程，增量扫描开销极低，每次打开都统计保证实时）
                 KimiLocalUsageService.shared.refreshIfNeeded()
                 // 基于缓存快速判断是否需要弹窗
                 model.checkCachedKimiUpdate()
