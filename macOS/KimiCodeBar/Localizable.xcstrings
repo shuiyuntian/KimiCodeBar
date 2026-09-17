@@ -1248,6 +1248,16 @@
         }
       }
     },
+    "周 %1$d%% · 5h %2$d%% · 30d %3$d%%" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7D %1$d%% · 5H %2$d%% · 30D %3$d%%"
+          }
+        }
+      }
+    },
     "周%1$d%% 5h %2$d%%" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -2256,6 +2266,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Weekly Usage"
+          }
+        }
+      }
+    },
+    "本月用量" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Monthly Usage"
           }
         }
       }

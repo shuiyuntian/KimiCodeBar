@@ -35,6 +35,10 @@ struct KimiQuota: Equatable {
     let weekly: QuotaDetail
     let fiveHour: QuotaDetail
     let totalQuota: QuotaDetail
+    /// 月度总额度（新会员体系的月限额）。仅部分账号的后端响应包含该字段：
+    /// 服务端只下发 used_ratio（0~1 小数）与 reset_time，无绝对数值，
+    /// 这里存成 used=百分比、limit=100 的 QuotaDetail 以复用现有展示逻辑。nil 表示未返回，UI 不展示。
+    let monthly: QuotaDetail?
     let membershipLevel: String?
     let boosterWallet: BoosterWallet?
     /// 账号唯一标识（user 对象中的 id/phone/email，取第一个非空值；都没有则为 nil）。
@@ -170,6 +174,25 @@ final class KimiCodeBarQuotaService {
                 let limit: String?
                 let remaining: String?
             }
+            /// 新会员体系的按窗口用量汇总：官方 CLI 只下发 used_ratio + reset_time，
+            /// 没有绝对数值。月限额（limit_month_total）仅部分账号返回。
+            struct Usages: Codable {
+                struct RatioEntry: Codable {
+                    let usedRatio: Double?
+                    let resetTime: String?
+                }
+                let limit5h: RatioEntry?
+                let limit7d: RatioEntry?
+                let limitMonthTotal: RatioEntry?
+                let limitMonthCode: RatioEntry?
+
+                enum CodingKeys: String, CodingKey {
+                    case limit5h = "limit_5h"
+                    case limit7d = "limit_7d"
+                    case limitMonthTotal = "limit_month_total"
+                    case limitMonthCode = "limit_month_code"
+                }
+            }
             struct User: Codable {
                 struct Membership: Codable {
                     let level: String?
@@ -200,6 +223,7 @@ final class KimiCodeBarQuotaService {
             let usage: Usage?
             let limits: [Limit]?
             let totalQuota: TotalQuota?
+            let usages: Usages?
             let user: User?
             let boosterWallet: BoosterWallet?
         }
@@ -231,6 +255,20 @@ final class KimiCodeBarQuotaService {
             remaining: resp.totalQuota?.remaining,
             resetTime: nil
         )
+
+        // 月度总额度：used_ratio 是 0~1 小数，换算为百分比存进 QuotaDetail（limit=100）。
+        // 后端未返回该字段（老计划可能不返回）时为 nil，UI 按字段有无动态展示。
+        let monthly: QuotaDetail? = resp.usages?.limitMonthTotal.flatMap { entry in
+            guard let ratio = entry.usedRatio else { return nil }
+            let pct = max(0, min(100, Int((ratio * 100).rounded())))
+            return QuotaDetail(
+                used: pct,
+                limit: 100,
+                remaining: 100 - pct,
+                resetTime: parseDate(entry.resetTime),
+                percentage: pct
+            )
+        }
 
         let membershipLevel = resp.user?.membership?.level
 
@@ -272,6 +310,7 @@ final class KimiCodeBarQuotaService {
             weekly: weekly,
             fiveHour: fiveHour,
             totalQuota: totalQuota,
+            monthly: monthly,
             membershipLevel: membershipLevel,
             boosterWallet: boosterWallet,
             userIdentifier: [resp.user?.id?.value, resp.user?.phone?.value, resp.user?.email?.value]
