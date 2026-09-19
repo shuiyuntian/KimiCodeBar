@@ -37,6 +37,8 @@ struct KimiLiveSpeedSnapshot {
     var state: KimiLiveSpeedState
     var agents: [KimiAgentSpeed]
     var totalLive: Double?
+    /// 最近 60 秒的合计速度时间线（每秒一个值，旧 → 新），用于曲线绘制
+    var speedTimeline: [Double]
 }
 
 // MARK: - 实时速度服务
@@ -54,12 +56,14 @@ final class KimiLiveSpeedService: ObservableObject {
     @Published private(set) var agentSpeeds: [KimiAgentSpeed] = []
     /// 全部活跃 agent 的实时速度合计
     @Published private(set) var totalLiveTokensPerSec: Double? = nil
+    /// 最近 60 秒合计速度时间线（每秒一个值，旧 → 新），仅面板打开期间采集
+    @Published private(set) var speedTimeline: [Double] = []
 
     private var engine: Engine?
 
     private init() {}
 
-    /// 面板打开时调用
+    /// 启动实时连接（幂等）。引擎常驻运行：菜单栏实时指标在面板关闭时也需要数据。
     func start() {
         guard engine == nil else { return }
         let engine = Engine()
@@ -69,19 +73,21 @@ final class KimiLiveSpeedService: ObservableObject {
         }
     }
 
-    /// 面板关闭时调用
+    /// 停止实时连接（目前仅退出 App 时调用）
     func stop() {
         engine?.stop()
         engine = nil
         state = .idle
         agentSpeeds = []
         totalLiveTokensPerSec = nil
+        speedTimeline = []
     }
 
     private func apply(_ snapshot: KimiLiveSpeedSnapshot) {
         state = snapshot.state
         agentSpeeds = snapshot.agents
         totalLiveTokensPerSec = snapshot.totalLive
+        speedTimeline = snapshot.speedTimeline
     }
 }
 
@@ -126,6 +132,10 @@ private extension KimiLiveSpeedService {
         private var trackers: [String: Tracker] = [:]
         private var subscribed: Set<String> = []
         private var subscribedSessions: Set<String> = []
+
+        /// 60 秒速度时间线环形缓冲（按下标 = 秒 % 60 归桶，timelineSeconds 校验有效期）
+        private var timelineTokens = [Double](repeating: 0, count: 60)
+        private var timelineSeconds = [Int](repeating: -1, count: 60)
 
         func start(_ onUpdate: @escaping @Sendable (KimiLiveSpeedSnapshot) -> Void) {
             self.onUpdate = onUpdate
@@ -567,8 +577,31 @@ private extension KimiLiveSpeedService {
             return KimiLiveSpeedSnapshot(
                 state: state,
                 agents: agents,
-                totalLive: total > 0 ? total : nil
+                totalLive: total > 0 ? total : nil,
+                speedTimeline: buildTimeline(now: now)
             )
+        }
+
+        /// 汇总全部 agent 最近 60 秒的 delta，按秒归桶得到速度时间线（旧 → 新）
+        private func buildTimeline(now: Date) -> [Double] {
+            for tracker in trackers.values {
+                for sample in tracker.samples where now.timeIntervalSince(sample.date) <= 60 {
+                    let second = Int(sample.date.timeIntervalSince1970)
+                    let index = second % 60
+                    if timelineSeconds[index] == second {
+                        timelineTokens[index] += sample.tokens
+                    } else {
+                        timelineSeconds[index] = second
+                        timelineTokens[index] = sample.tokens
+                    }
+                }
+            }
+            let currentSecond = Int(now.timeIntervalSince1970)
+            return (0..<60).map { offset in
+                let second = currentSecond - 59 + offset
+                let index = second % 60
+                return timelineSeconds[index] == second ? timelineTokens[index] : 0
+            }
         }
     }
 }

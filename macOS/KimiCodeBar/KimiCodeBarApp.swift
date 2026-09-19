@@ -104,6 +104,8 @@ struct KimiCodeBarApp: App {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { _, _ in }
         NSApplication.shared.appearance = ThemeManager.shared.theme.nsAppearance
         _ = SparkleUpdater.shared
+        // Token 速度实时连接常驻运行：菜单栏实时指标在面板关闭时也需要数据
+        KimiLiveSpeedService.shared.start()
     }
 
     var body: some Scene {
@@ -178,6 +180,14 @@ extension ShapeStyle where Self == Color {
 struct KimiLabel: View {
     @StateObject private var model = KimiCodeBarModel.shared
     @StateObject private var languageManager = LanguageManager.shared
+    @StateObject private var liveService = KimiLiveSpeedService.shared
+
+    /// 菜单栏实时速度文本（带单位，仅生成中显示；空间紧凑用 /s）
+    private var speedText: String? {
+        guard liveService.state == .live,
+              let total = liveService.totalLiveTokensPerSec else { return nil }
+        return "\(Int(total.rounded()))/s"
+    }
 
     var body: some View {
         // WorkBuddy 主账号：sparkle 图标 + 积分数字
@@ -216,7 +226,8 @@ struct KimiLabel: View {
                 scheme: model.menuBarDisplayScheme,
                 weekly: quota.weekly.percentage,
                 fiveHour: quota.fiveHour.percentage,
-                monthly: quota.monthly?.percentage
+                monthly: quota.monthly?.percentage,
+                speedText: speedText
             ))
         } else {
             Text(model.text)
@@ -289,16 +300,16 @@ enum MenuBarTextRenderer {
     // 模板图只读取 alpha 通道，实际染色由系统按菜单栏明暗外观决定，此处颜色只需保证不透明
     private static let textColor = Color.black
 
-    static func image(scheme: MenuBarDisplayScheme, weekly: Int, fiveHour: Int, monthly: Int? = nil) -> NSImage {
+    static func image(scheme: MenuBarDisplayScheme, weekly: Int, fiveHour: Int, monthly: Int? = nil, speedText: String? = nil) -> NSImage {
         switch scheme {
         case .compact:
-            return compactImage(weekly: weekly, fiveHour: fiveHour, monthly: monthly)
+            return compactImage(weekly: weekly, fiveHour: fiveHour, monthly: monthly, speedText: speedText)
         case .kPrefix:
-            return prefixImage(prefix: "K", weekly: weekly, fiveHour: fiveHour, monthly: monthly)
+            return prefixImage(prefix: "K", weekly: weekly, fiveHour: fiveHour, monthly: monthly, speedText: speedText)
         case .kimiPrefix:
-            return prefixImage(prefix: "Kimi", weekly: weekly, fiveHour: fiveHour, monthly: monthly)
+            return prefixImage(prefix: "Kimi", weekly: weekly, fiveHour: fiveHour, monthly: monthly, speedText: speedText)
         case .singleLine:
-            return singleLineImage(weekly: weekly, fiveHour: fiveHour, monthly: monthly)
+            return singleLineImage(weekly: weekly, fiveHour: fiveHour, monthly: monthly, speedText: speedText)
         }
     }
 
@@ -370,7 +381,8 @@ enum MenuBarTextRenderer {
     /// 原始紧凑样式：48pt 宽，两行 7D/5H。
     /// 这是用户已经深度微调过的样式，原封不动保留。
     /// 后端返回月限额时追加第三行 30D，标签列加宽并整体加高以容纳三行。
-    private static func compactImage(weekly: Int, fiveHour: Int, monthly: Int?) -> NSImage {
+    /// 生成中追加「TOK 速度/s」实时速度行，再 +10 行高。
+    private static func compactImage(weekly: Int, fiveHour: Int, monthly: Int?, speedText: String? = nil) -> NSImage {
         let showsMonthly = monthly != nil
         // "30D" 比 "7D"/"5H" 多一个字符，有月限额时三行标签列统一加宽到 20 保持百分比对齐
         let labelWidth: CGFloat = showsMonthly ? 20 : 16
@@ -409,16 +421,35 @@ enum MenuBarTextRenderer {
                         .frame(width: 30, alignment: .trailing)
                 }
             }
+            if let speedText {
+                // 实时 Token 速度行（带单位，空间紧凑用 /s）
+                HStack(spacing: 2) {
+                    Text("TOK")
+                        .font(.system(size: 10, weight: .medium, design: .default))
+                        .frame(width: labelWidth, alignment: .leading)
+                    Text(speedText)
+                        .font(.system(size: 10, weight: .medium, design: .default))
+                        .monospacedDigit()
+                        .frame(width: 30, alignment: .trailing)
+                }
+            }
         }
         .foregroundStyle(textColor)
-        .frame(width: totalWidth, height: showsMonthly ? 32 : 20, alignment: .trailing)
+        .frame(width: totalWidth, height: compactHeight(showsMonthly: monthly != nil, showsSpeed: speedText != nil), alignment: .trailing)
 
         return render(content)
     }
 
+    /// 紧凑样式行高：两行 20，月限额 +12，速度行 +10
+    private static func compactHeight(showsMonthly: Bool, showsSpeed: Bool) -> CGFloat {
+        var height: CGFloat = showsMonthly ? 32 : 20
+        if showsSpeed { height += 10 }
+        return height
+    }
+
     /// 前缀样式：K / Kimi 作为左侧大字号前缀，右侧上下两行百分比。
     /// 有月限额时追加第三行百分比，整体加高。
-    private static func prefixImage(prefix: String, weekly: Int, fiveHour: Int, monthly: Int?) -> NSImage {
+    private static func prefixImage(prefix: String, weekly: Int, fiveHour: Int, monthly: Int?, speedText: String? = nil) -> NSImage {
         let prefixWidth: CGFloat = prefix == "K" ? 14 : 38
         let percentageWidth: CGFloat = 36
         let totalWidth: CGFloat = prefixWidth + 3 + percentageWidth
@@ -444,16 +475,30 @@ enum MenuBarTextRenderer {
                         .monospacedDigit()
                         .frame(width: percentageWidth, alignment: .trailing)
                 }
+                if let speedText {
+                    // 实时 Token 速度行（带单位，空间紧凑用 /s）
+                    Text(speedText)
+                        .font(percentageFont(for: 0))
+                        .monospacedDigit()
+                        .frame(width: percentageWidth, alignment: .trailing)
+                }
             }
         }
         .foregroundStyle(textColor)
-        .frame(width: totalWidth, height: monthly != nil ? 34 : 20, alignment: .trailing)
+        .frame(width: totalWidth, height: prefixHeight(showsMonthly: monthly != nil, showsSpeed: speedText != nil), alignment: .trailing)
 
         return render(content)
     }
 
-    /// 单行样式：Kimi 84% · 6%（有月限额时追加 · 32%）
-    private static func singleLineImage(weekly: Int, fiveHour: Int, monthly: Int?) -> NSImage {
+    /// 前缀样式行高：两行 20，月限额 +14，速度行 +10
+    private static func prefixHeight(showsMonthly: Bool, showsSpeed: Bool) -> CGFloat {
+        var height: CGFloat = showsMonthly ? 34 : 20
+        if showsSpeed { height += 10 }
+        return height
+    }
+
+    /// 单行样式：Kimi 84% · 6%（有月限额时追加 · 32%，生成中追加 · 46 tok/s）
+    private static func singleLineImage(weekly: Int, fiveHour: Int, monthly: Int?, speedText: String? = nil) -> NSImage {
         let content = HStack(spacing: 4) {
             Text("Kimi")
                 .font(.system(size: 12, weight: .bold, design: .default))
@@ -469,6 +514,14 @@ enum MenuBarTextRenderer {
                 Text("·")
                     .font(.system(size: 12, weight: .medium))
                 Text(percentageText(monthly))
+                    .font(.system(size: 12, weight: .medium, design: .default))
+                    .monospacedDigit()
+            }
+            if let speedText {
+                // 实时 Token 速度（单行空间充裕，带完整单位 tok/s）
+                Text("·")
+                    .font(.system(size: 12, weight: .medium))
+                Text(speedText.replacingOccurrences(of: "/s", with: " tok/s"))
                     .font(.system(size: 12, weight: .medium, design: .default))
                     .monospacedDigit()
             }
@@ -1271,7 +1324,7 @@ struct KimiMenu: View {
                 SparkleUpdater.shared.checkForUpdateInformation()
                 // 面板打开时扫描一次本机消耗量（后台线程，增量扫描开销极低，每次打开都统计保证实时）
                 KimiLocalUsageService.shared.refreshIfNeeded()
-                // 面板打开时启动 Token 速度实时连接（WebSocket delta 流）
+                // Token 速度实时连接常驻运行，此处无需重复启动（start 幂等，仅作兜底）
                 KimiLiveSpeedService.shared.start()
                 // 基于缓存快速判断是否需要弹窗
                 model.checkCachedKimiUpdate()
@@ -1287,9 +1340,6 @@ struct KimiMenu: View {
                         showUpdateAlert = false
                     }
                 }
-            } else {
-                // 面板关闭：断开 Token 速度实时连接
-                KimiLiveSpeedService.shared.stop()
             }
         }
         .popover(isPresented: $showUpdateAlert, arrowEdge: .trailing) {
