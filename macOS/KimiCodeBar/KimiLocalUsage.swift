@@ -9,6 +9,12 @@ struct LocalUsageDay: Identifiable {
     var input: Int = 0      // 输入合计 = 非缓存 + 缓存读 + 缓存写
     var output: Int = 0     // 输出
     var cacheRead: Int = 0  // 缓存读（用于命中率）
+    /// Σ 各 step 流式生成耗时（ms），仅统计 output > 0 且耗时 > 0 的 step（用于平均输出速度）
+    var outputMs: Int = 0
+    /// Σ 各 step 首 Token 延迟（ms），统计口径与 outputMs 一致
+    var ttftMs: Int = 0
+    /// 参与速度统计的 step 数（用于平均首 Token 延迟）
+    var ttftCount: Int = 0
 
     var totalTokens: Int { input + output }
 }
@@ -49,6 +55,9 @@ private struct LocalUsageDayCodable: Codable {
     var input: Int
     var output: Int
     var cacheRead: Int
+    var outputMs: Int
+    var ttftMs: Int
+    var ttftCount: Int
 }
 
 /// 日期 key 格式化器（yyyy-MM-dd），用于状态字典的 key
@@ -62,7 +71,7 @@ private let scanDayKeyFormatter: DateFormatter = {
 // MARK: - 本机消耗量服务
 
 /// 扫描 Kimi Code 本地会话记录（sessions/<工作目录>/<会话>/agents/*/wire.jsonl），
-/// 聚合 usage.record 事件得出按天 Token 消耗。
+/// 聚合 usage.record（token 计数）与 step.end（逐 step 速度与首 Token 延迟）事件得出按天统计。
 /// 原则：只读，绝不修改官方任何文件；不触碰 credentials；尊重 KIMI_CODE_HOME。
 /// 策略：增量扫描 — 记录每个文件的字节偏移量，仅读取新增内容；
 /// 状态持久化到 Application Support，重启后从上次位置继续；
@@ -110,6 +119,20 @@ final class KimiLocalUsageService: ObservableObject {
         }
     }
 
+    /// 指定范围的 Token 速度统计（来源：step.end 逐 step 数据）：
+    /// - tokensPerSec：平均输出速度 = Σoutput ÷ (Σ流式耗时)，无有效 step 时为 nil
+    /// - ttftMs：平均首 Token 延迟，无有效 step 时为 nil
+    func speedStats(in range: LocalUsageRange) -> (tokensPerSec: Double?, ttftMs: Double?) {
+        let scoped = days(in: range)
+        let output = scoped.reduce(0) { $0 + $1.output }
+        let outputMs = scoped.reduce(0) { $0 + $1.outputMs }
+        let ttftMs = scoped.reduce(0) { $0 + $1.ttftMs }
+        let ttftCount = scoped.reduce(0) { $0 + $1.ttftCount }
+        let speed = outputMs > 0 ? Double(output) / (Double(outputMs) / 1000) : nil
+        let ttft = ttftCount > 0 ? Double(ttftMs) / Double(ttftCount) : nil
+        return (speed, ttft)
+    }
+
     // MARK: 数字格式化（随显示语言：中文 亿/万，英文 B/M/K）
 
     static func formatTokenCount(_ count: Int) -> (value: String, unit: String) {
@@ -149,8 +172,8 @@ final class KimiLocalUsageService: ObservableObject {
               let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any] else {
             return ScanState()
         }
-        // v1 状态没有按小时粒度：整体作废，触发一次全量重扫重建（含小时数据）
-        guard (json["version"] as? Int ?? 1) >= 2 else { return ScanState() }
+        // v1 状态没有按小时粒度；v2 状态没有速度统计字段：整体作废，触发一次全量重扫重建
+        guard (json["version"] as? Int ?? 1) >= 3 else { return ScanState() }
         var state = ScanState()
         if let offsets = json["offsets"] as? [String: Int] {
             state.offsets = offsets
@@ -164,7 +187,10 @@ final class KimiLocalUsageService: ObservableObject {
                     date: dict["date"] as? TimeInterval ?? 0,
                     input: dict["input"] as? Int ?? 0,
                     output: dict["output"] as? Int ?? 0,
-                    cacheRead: dict["cacheRead"] as? Int ?? 0
+                    cacheRead: dict["cacheRead"] as? Int ?? 0,
+                    outputMs: dict["outputMs"] as? Int ?? 0,
+                    ttftMs: dict["ttftMs"] as? Int ?? 0,
+                    ttftCount: dict["ttftCount"] as? Int ?? 0
                 )
             }
         }
@@ -174,10 +200,11 @@ final class KimiLocalUsageService: ObservableObject {
     /// 将扫描状态写入磁盘
     nonisolated private static func saveScanState(_ state: ScanState) {
         let daysDict = state.daysByKey.mapValues { d -> [String: Any] in
-            ["date": d.date, "input": d.input, "output": d.output, "cacheRead": d.cacheRead]
+            ["date": d.date, "input": d.input, "output": d.output, "cacheRead": d.cacheRead,
+             "outputMs": d.outputMs, "ttftMs": d.ttftMs, "ttftCount": d.ttftCount]
         }
         let obj: [String: Any] = [
-            "version": 2,
+            "version": 3,
             "offsets": state.offsets,
             "days": daysDict,
             "hours": state.hoursByKey
@@ -241,32 +268,56 @@ final class KimiLocalUsageService: ObservableObject {
                       let text = String(data: newData, encoding: .utf8) else { return }
 
                 text.enumerateLines { line, _ in
-                    guard line.contains("\"usage.record\""),
+                    // 两类事件：usage.record（token 计数）与 context.append_loop_event 中的
+                    // step.end（逐 step 输出耗时与首 Token 延迟，用于 Token 速度统计）
+                    guard line.contains("\"usage.record\"")
+                            || line.contains("\"context.append_loop_event\""),
                           let lineData = line.data(using: .utf8),
                           let event = try? JSONSerialization.jsonObject(with: lineData) as? [String: Any],
-                          event["type"] as? String == "usage.record",
-                          let usage = event["usage"] as? [String: Any],
+                          let eventType = event["type"] as? String,
                           let timeMs = (event["time"] as? NSNumber)?.doubleValue else { return }
 
                     let eventDate = Date(timeIntervalSince1970: timeMs / 1000)
                     let day = calendar.startOfDay(for: eventDate)
                     let key = scanDayKeyFormatter.string(from: day)
                     var entry = state.daysByKey[key] ?? LocalUsageDayCodable(
-                        date: day.timeIntervalSince1970, input: 0, output: 0, cacheRead: 0
+                        date: day.timeIntervalSince1970,
+                        input: 0, output: 0, cacheRead: 0,
+                        outputMs: 0, ttftMs: 0, ttftCount: 0
                     )
-                    let cacheRead = (usage["inputCacheRead"] as? NSNumber)?.intValue ?? 0
-                    let input = ((usage["inputOther"] as? NSNumber)?.intValue ?? 0)
-                        + cacheRead
-                        + ((usage["inputCacheCreation"] as? NSNumber)?.intValue ?? 0)
-                    let output = (usage["output"] as? NSNumber)?.intValue ?? 0
-                    entry.input += input
-                    entry.output += output
-                    entry.cacheRead += cacheRead
-                    state.daysByKey[key] = entry
 
-                    // 小时粒度（服务「今日」波浪曲线）
-                    let hourKey = String(format: "%@-%02d", key, calendar.component(.hour, from: eventDate))
-                    state.hoursByKey[hourKey, default: 0] += input + output
+                    if eventType == "usage.record",
+                       let usage = event["usage"] as? [String: Any] {
+                        let cacheRead = (usage["inputCacheRead"] as? NSNumber)?.intValue ?? 0
+                        let input = ((usage["inputOther"] as? NSNumber)?.intValue ?? 0)
+                            + cacheRead
+                            + ((usage["inputCacheCreation"] as? NSNumber)?.intValue ?? 0)
+                        let output = (usage["output"] as? NSNumber)?.intValue ?? 0
+                        entry.input += input
+                        entry.output += output
+                        entry.cacheRead += cacheRead
+                        state.daysByKey[key] = entry
+
+                        // 小时粒度（服务「今日」波浪曲线）
+                        let hourKey = String(format: "%@-%02d", key, calendar.component(.hour, from: eventDate))
+                        state.hoursByKey[hourKey, default: 0] += input + output
+                        return
+                    }
+
+                    // step.end：累加速度统计字段（token 计数仍只由 usage.record 提供，不双计）
+                    guard eventType == "context.append_loop_event",
+                          let stepEnd = event["event"] as? [String: Any],
+                          stepEnd["type"] as? String == "step.end",
+                          let usage = stepEnd["usage"] as? [String: Any] else { return }
+
+                    let output = (usage["output"] as? NSNumber)?.intValue ?? 0
+                    let streamMs = (stepEnd["llmStreamDurationMs"] as? NSNumber)?.intValue ?? 0
+                    guard output > 0, streamMs > 0 else { return }
+
+                    entry.outputMs += streamMs
+                    entry.ttftMs += (stepEnd["llmFirstTokenLatencyMs"] as? NSNumber)?.intValue ?? 0
+                    entry.ttftCount += 1
+                    state.daysByKey[key] = entry
                 }
             }
 
@@ -292,7 +343,10 @@ final class KimiLocalUsageService: ObservableObject {
                 date: Date(timeIntervalSince1970: c.date),
                 input: c.input,
                 output: c.output,
-                cacheRead: c.cacheRead
+                cacheRead: c.cacheRead,
+                outputMs: c.outputMs,
+                ttftMs: c.ttftMs,
+                ttftCount: c.ttftCount
             )
         }.sorted { $0.date < $1.date }
 

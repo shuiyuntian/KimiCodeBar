@@ -1,3517 +1,3547 @@
 {
-  "sourceLanguage" : "zh-Hans",
-  "strings" : {
-    "" : {
-
-    },
-    "--" : {
-
-    },
-    "-- · --" : {
-
-    },
-    "--%" : {
-
-    },
-    "·" : {
-
-    },
-    "/" : {
-
-    },
-    "## 检查更新接口错误反馈\n\n错误信息：\n```\n%1$@\n```\n\n请补充以下信息：\n- 当前 KimiCodeBar 版本：%2$@\n- 当前网络环境：\n- 问题描述：\n" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "## Update check API error report\n\nError message:\n```\n%1$@\n```\n\nPlease add the following information:\n- Current KimiCodeBar version: %2$@\n- Current network environment:\n- Problem description:\n"
+  "sourceLanguage": "zh-Hans",
+  "strings": {
+    "": {},
+    "--": {},
+    "-- · --": {},
+    "--%": {},
+    "·": {},
+    "/": {},
+    "## 检查更新接口错误反馈\n\n错误信息：\n```\n%1$@\n```\n\n请补充以下信息：\n- 当前 KimiCodeBar 版本：%2$@\n- 当前网络环境：\n- 问题描述：\n": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "## Update check API error report\n\nError message:\n```\n%1$@\n```\n\nPlease add the following information:\n- Current KimiCodeBar version: %2$@\n- Current network environment:\n- Problem description:\n"
           }
         }
       }
-    },
-    "%" : {
-
     },
-    "%@ · %@%@" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@ · %2$@%3$@"
+    "%": {},
+    "%@ · %@%@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ · %2$@%3$@"
           }
         }
       }
     },
-    "%@ / %@" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@ / %2$@"
+    "%@ / %@": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ / %2$@"
           }
         }
       }
     },
-    "%@ 积分" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@ credits"
+    "%@ 积分": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ credits"
           }
         }
       }
     },
-    "%@后重置" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Resets in %@"
+    "%@后重置": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resets in %@"
           }
         }
       }
     },
-    "%1$d 次提交" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$d commits"
+    "%1$d 次提交": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$d commits"
           }
         }
       }
     },
-    "%1$d天%2$d小时后重置" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Resets in %1$dd %2$dh"
+    "%1$d天%2$d小时后重置": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resets in %1$dd %2$dh"
           }
         }
       }
     },
-    "%1$d小时%2$d分钟后重置" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Resets in %1$dh %2$dm"
+    "%1$d小时%2$d分钟后重置": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resets in %1$dh %2$dm"
           }
         }
       }
     },
-    "%d分钟后重置" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Resets in %dm"
+    "%d分钟后重置": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resets in %dm"
           }
         }
       }
-    },
-    "%lld" : {
-
-    },
-    "%lld%%" : {
-
-    },
-    "✨" : {
-
     },
-    "5H" : {
-
-    },
-    "5小时用量" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "5-Hour Usage"
+    "%lld": {},
+    "%lld%%": {},
+    "✨": {},
+    "5H": {},
+    "5小时用量": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "5-Hour Usage"
           }
         }
       }
     },
-    "7 天使用 Token" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "7-Day Token Used"
+    "7 天使用 Token": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "7-Day Token Used"
           }
         }
       }
-    },
-    "7D" : {
-
     },
-    "7天" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "7D"
+    "7D": {},
+    "7天": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "7D"
           }
         }
       }
     },
-    "API Key 已失效，请在设置中修改" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "API Key invalid, please update in Settings"
+    "API Key 已失效，请在设置中修改": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API Key invalid, please update in Settings"
           }
         }
       }
     },
-    "API Key 格式错误，应以 sk-kimi- 开头" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Invalid API Key format. The key should start with sk-kimi-"
+    "API Key 格式错误，应以 sk-kimi- 开头": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Invalid API Key format. The key should start with sk-kimi-"
           }
         }
       }
     },
-    "API Key 登录" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sign in with API Key"
+    "API Key 登录": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sign in with API Key"
           }
         }
       }
     },
-    "C" : {
-
-    },
-    "Claude/GPT 5小时" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Claude/GPT 5-hour"
+    "C": {},
+    "Claude/GPT 5小时": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Claude/GPT 5-hour"
           }
         }
       }
     },
-    "Claude/GPT 周限额" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Claude/GPT weekly"
+    "Claude/GPT 周限额": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Claude/GPT weekly"
           }
         }
       }
     },
-    "CLI 使用中" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "CLI Active"
+    "CLI 使用中": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "CLI Active"
           }
         }
       }
     },
-    "CLI 当前登录的账号未保存到 Bar，切换后其凭证将被覆盖，需要重新登录才能恢复。" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The account currently logged in to the CLI is not saved in Bar. Switching will overwrite its credentials, and it will need to log in again to recover."
+    "CLI 当前登录的账号未保存到 Bar，切换后其凭证将被覆盖，需要重新登录才能恢复。": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The account currently logged in to the CLI is not saved in Bar. Switching will overwrite its credentials, and it will need to log in again to recover."
           }
         }
       }
     },
-    "G" : {
-
-    },
-    "Gemini 5小时" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gemini 5-hour"
+    "G": {},
+    "Gemini 5小时": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gemini 5-hour"
           }
         }
       }
     },
-    "Gemini 周限额" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gemini weekly"
+    "Gemini 周限额": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gemini weekly"
           }
         }
       }
     },
-    "GitHub Release 接口请求失败：%@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "GitHub Release API request failed: %@"
+    "GitHub Release 接口请求失败：%@": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "GitHub Release API request failed: %@"
           }
         }
       }
     },
-    "GitHub Release 接口返回异常状态码：%@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The GitHub Release API returned an unexpected status code: %@"
+    "GitHub Release 接口返回异常状态码：%@": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The GitHub Release API returned an unexpected status code: %@"
           }
         }
       }
     },
-    "GitHub Release 接口返回数据解析失败：%@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Failed to parse the GitHub Release API response: %@"
+    "GitHub Release 接口返回数据解析失败：%@": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Failed to parse the GitHub Release API response: %@"
           }
         }
       }
     },
-    "GitHub 仓库" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "GitHub Repo"
+    "GitHub 仓库": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "GitHub Repo"
           }
         }
       }
     },
-    "K 前缀" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "K Prefix"
+    "K 前缀": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "K Prefix"
           }
         }
       }
-    },
-    "Kimi" : {
-
     },
-    "Kimi API 返回错误（%1$@）：%2$@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kimi API returned an error (%1$@): %2$@"
+    "Kimi": {},
+    "Kimi API 返回错误（%1$@）：%2$@": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kimi API returned an error (%1$@): %2$@"
           }
         }
       }
     },
-    "Kimi Code 本机消耗量" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kimi Code Local Consumption"
+    "Kimi Code 本机消耗量": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kimi Code Local Consumption"
           }
         }
       }
     },
-    "Kimi Code 本机消耗量卡片" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kimi Code Local Consumption Card"
+    "Kimi Code 本机消耗量卡片": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kimi Code Local Consumption Card"
           }
         }
       }
     },
-    "Kimi Web" : {
-
-    },
-    "Kimi Web 卡片" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kimi Web Card"
+    "Kimi Web": {},
+    "Kimi Web 卡片": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kimi Web Card"
           }
         }
       }
     },
-    "Kimi Web 运行版本 %1$@ 低于已安装版本 %2$@，建议重启服务。" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kimi Web is running %1$@, which is older than the installed %2$@. A restart is recommended."
+    "Kimi Web 运行版本 %1$@ 低于已安装版本 %2$@，建议重启服务。": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kimi Web is running %1$@, which is older than the installed %2$@. A restart is recommended."
           }
         }
       }
     },
-    "Kimi 前缀" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kimi Prefix"
+    "Kimi 前缀": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kimi Prefix"
           }
         }
       }
     },
-    "Kimi 登录" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sign in with Kimi"
+    "Kimi 登录": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sign in with Kimi"
           }
         }
       }
     },
-    "KimiCode %@" : {
-
+    "KimiCode %@": {},
+    "KimiCode %@ 已发布，点击更新。": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "KimiCode %@ is available. Click to update."
+          }
+        }
+      }
     },
-    "KimiCode %@ 已发布，点击更新。" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "KimiCode %@ is available. Click to update."
+    "KimiCode %1$@ 可供下载，您现在的版本是 %2$@。要现在下载吗？": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "KimiCode %1$@ is available—you're now running %2$@. Do you want to download it now?"
           }
         }
       }
     },
-    "KimiCode %1$@ 可供下载，您现在的版本是 %2$@。要现在下载吗？" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "KimiCode %1$@ is available—you're now running %2$@. Do you want to download it now?"
+    "KimiCode Bar": {},
+    "KimiCode Bar 设置": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "KimiCode Bar Settings"
           }
         }
       }
     },
-    "KimiCode Bar" : {
-
+    "KimiCode CLI": {},
+    "KimiCode CLI 检查更新": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "KimiCode CLI Update Check"
+          }
+        }
+      }
     },
-    "KimiCode Bar 设置" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "KimiCode Bar Settings"
+    "KimiCode CLI 版本号": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "KimiCode CLI Version"
           }
         }
       }
     },
-    "KimiCode CLI" : {
-
+    "KimiCode 有新版本": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New KimiCode Version Available"
+          }
+        }
+      }
     },
-    "KimiCode CLI 检查更新" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "KimiCode CLI Update Check"
+    "KimiCodeBar": {},
+    "KimiCodeBar %1$@ 已发布，您现在的版本是 %2$@。": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "KimiCodeBar %1$@ is available—you're now running %2$@."
           }
         }
       }
     },
-    "KimiCode CLI 版本号" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "KimiCode CLI Version"
+    "KimiCodeBar 版本号": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "KimiCodeBar Version"
           }
         }
       }
     },
-    "KimiCode 有新版本" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "New KimiCode Version Available"
+    "KimiCodeBar 版本行": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "KimiCodeBar Version Row"
           }
         }
       }
     },
-    "KimiCodeBar" : {
-
+    "Open Source": {},
+    "sk-...": {},
+    "sk-kimi-...": {},
+    "Token 登录": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sign in with Token"
+          }
+        }
+      }
     },
-    "KimiCodeBar %1$@ 已发布，您现在的版本是 %2$@。" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "KimiCodeBar %1$@ is available—you're now running %2$@."
+    "v%@": {},
+    "WorkBuddy 账号 Key 由 WorkBuddy 客户端管理": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "WorkBuddy keys are managed by the WorkBuddy client"
           }
         }
       }
     },
-    "KimiCodeBar 版本号" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "KimiCodeBar Version"
+    "WorkBuddy 账号请用本地读取方式添加": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "WorkBuddy accounts use the local-read flow"
           }
         }
       }
     },
-    "KimiCodeBar 版本行" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "KimiCodeBar Version Row"
+    "一个月以后": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 Month"
           }
         }
       }
     },
-    "Open Source" : {
-
+    "一周以后": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 Week"
+          }
+        }
+      }
     },
-    "sk-..." : {
-
+    "一天以后": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 Day"
+          }
+        }
+      }
     },
-    "sk-kimi-..." : {
-
+    "上次自动归档：%1$@，共 %2$d 个会话": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Last auto-archive: %1$@ · %2$d sessions"
+          }
+        }
+      }
     },
-    "Token 登录" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sign in with Token"
+    "下载新版本": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Download New Version"
           }
         }
       }
     },
-    "v%@" : {
-
+    "为 Kimi Code 量身设计的用量监控小工具，在菜单栏轻量化运行，限额一目了然。": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A usage monitor designed for Kimi Code. It lives in your menu bar and keeps your limits at a glance."
+          }
+        }
+      }
     },
-    "WorkBuddy 账号 Key 由 WorkBuddy 客户端管理" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "WorkBuddy keys are managed by the WorkBuddy client"
+    "为该账号设置一个便于区分的别名，留空则恢复默认名称。": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set an alias to distinguish this account. Leave blank to restore the default name."
           }
         }
       }
     },
-    "WorkBuddy 账号请用本地读取方式添加" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "WorkBuddy accounts use the local-read flow"
+    "主账号": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Primary"
           }
         }
       }
     },
-    "一个月以后" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1 Month"
+    "今日": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today"
           }
         }
       }
     },
-    "一周以后" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1 Week"
+    "今日使用 Token": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Token Used Today"
           }
         }
       }
     },
-    "一天以后" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1 Day"
+    "仍然切换": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Switch Anyway"
           }
         }
       }
     },
-    "上次自动归档：%1$@，共 %2$d 个会话" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Last auto-archive: %1$@ · %2$d sessions"
+    "从本地 WorkBuddy 添加": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add from local WorkBuddy"
           }
         }
       }
     },
-    "下载新版本" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Download New Version"
+    "会话列表": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sessions"
           }
         }
       }
     },
-    "为 Kimi Code 量身设计的用量监控小工具，在菜单栏轻量化运行，限额一目了然。" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "A usage monitor designed for Kimi Code. It lives in your menu bar and keeps your limits at a glance."
+    "余额不可用，API 调用被拒绝": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Balance unavailable, API calls rejected"
           }
         }
       }
     },
-    "为该账号设置一个便于区分的别名，留空则恢复默认名称。" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Set an alias to distinguish this account. Leave blank to restore the default name."
+    "使用 Google 登录": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sign in with Google"
           }
         }
       }
     },
-    "主账号" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Primary"
+    "保存": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save"
           }
         }
       }
     },
-    "今日" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Today"
+    "修改": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Edit"
           }
         }
       }
     },
-    "今日使用 Token" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Token Used Today"
+    "修改 API Key": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Update API Key"
           }
         }
       }
     },
-    "仍然切换" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Switch Anyway"
+    "修改 Key": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Update Key"
           }
         }
       }
     },
-    "从本地 WorkBuddy 添加" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Add from local WorkBuddy"
+    "修改失败": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Update Failed"
           }
         }
       }
     },
-    "会话列表" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sessions"
+    "停止": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stop"
           }
         }
       }
     },
-    "余额不可用，API 调用被拒绝" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Balance unavailable, API calls rejected"
+    "充值": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Top Up"
           }
         }
       }
     },
-    "使用 Google 登录" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sign in with Google"
+    "充值余额": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Topped-up Balance"
           }
         }
       }
     },
-    "保存" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Save"
+    "免费版": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Free"
           }
         }
       }
     },
-    "修改" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Edit"
+    "全部": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All"
           }
         }
       }
     },
-    "修改 API Key" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Update API Key"
+    "关于": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "About"
           }
         }
       }
     },
-    "修改 Key" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Update Key"
+    "关闭后打开面板和后台都不再检查新版本": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "When disabled, no update checks on panel open or in background"
           }
         }
       }
     },
-    "修改失败" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Update Failed"
+    "其他登录方式": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Other Sign-in Methods"
           }
         }
       }
     },
-    "停止" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stop"
+    "分钟": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "min"
           }
         }
       }
     },
-    "充值" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Top Up"
+    "切换 CLI 账号": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Switch CLI Account"
           }
         }
       }
     },
-    "充值余额" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Topped-up Balance"
+    "切换失败": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Switch Failed"
           }
         }
       }
     },
-    "免费版" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Free"
+    "切换账号": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Switch Account"
           }
         }
       }
     },
-    "全部" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "All"
+    "删除": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete"
           }
         }
       }
     },
-    "关于" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "About"
+    "删除账号": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete Account"
           }
         }
       }
     },
-    "关闭后打开面板和后台都不再检查新版本" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "When disabled, no update checks on panel open or in background"
+    "别名": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alias"
           }
         }
       }
     },
-    "其他登录方式" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Other Sign-in Methods"
+    "别名（可选）": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alias (optional)"
           }
         }
       }
     },
-    "分钟" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "min"
+    "刷新": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Refresh"
           }
         }
       }
     },
-    "切换 CLI 账号" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Switch CLI Account"
+    "前往 Kimi 控制台创建并复制 API Key。": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Create and copy an API Key in the Kimi console."
           }
         }
       }
     },
-    "切换失败" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Switch Failed"
+    "剩余": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "left"
           }
         }
       }
     },
-    "切换账号" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Switch Account"
+    "加油包": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Booster"
           }
         }
       }
     },
-    "删除" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Delete"
+    "加油包余额": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Booster Pack Balance"
           }
         }
       }
     },
-    "删除账号" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Delete Account"
+    "加油包余额卡片": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Booster Pack Card"
           }
         }
       }
     },
-    "别名" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alias"
+    "加载中…": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Loading…"
           }
         }
       }
     },
-    "别名（可选）" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alias (optional)"
+    "勾选要在菜单栏面板中显示的内容，取消勾选可隐藏对应卡片。设置即时生效。": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check the items you want to show in the menu bar panel. Uncheck to hide the corresponding card. Changes take effect immediately."
           }
         }
       }
     },
-    "刷新" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Refresh"
+    "单行": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Single Line"
           }
         }
       }
     },
-    "前往 Kimi 控制台创建并复制 API Key。" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Create and copy an API Key in the Kimi console."
+    "卡片显示": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Card Visibility"
           }
         }
       }
     },
-    "剩余" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "left"
+    "即将重置": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resetting soon"
           }
         }
       }
     },
-    "加油包" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Booster"
+    "去 GitHub 反馈": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Report on GitHub"
           }
         }
       }
     },
-    "加油包余额" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Booster Pack Balance"
+    "去授权": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Authorize"
           }
         }
       }
     },
-    "加油包余额卡片" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Booster Pack Card"
+    "去控制台": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open Console"
           }
         }
       }
     },
-    "加载中…" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Loading…"
+    "参与共建": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contribute"
           }
         }
       }
     },
-    "勾选要在菜单栏面板中显示的内容，取消勾选可隐藏对应卡片。设置即时生效。" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Check the items you want to show in the menu bar panel. Uncheck to hide the corresponding card. Changes take effect immediately."
+    "发现新版本": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New Version Available"
           }
         }
       }
     },
-    "单行" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Single Line"
+    "发现新版本时会强制显示": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Always shown when a new version is available"
           }
         }
       }
     },
-    "卡片显示" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Card Visibility"
+    "发现更新": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Update Available"
           }
         }
       }
     },
-    "即将重置" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Resetting soon"
+    "取消": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
           }
         }
       }
     },
-    "去 GitHub 反馈" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Report on GitHub"
+    "取消归档": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unarchive"
           }
         }
       }
     },
-    "去授权" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Authorize"
+    "启动": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start"
           }
         }
       }
     },
-    "去控制台" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Open Console"
+    "启动 WorkBuddy": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launch WorkBuddy"
           }
         }
       }
     },
-    "参与共建" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Contribute"
+    "启用检查更新": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enable Update Check"
           }
         }
       }
     },
-    "发现新版本" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "New Version Available"
+    "启用自动归档": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enable Auto Archive"
           }
         }
       }
     },
-    "发现新版本时会强制显示" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Always shown when a new version is available"
+    "周": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wk"
           }
         }
       }
     },
-    "发现更新" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Update Available"
+    "周 %1$d%% · 5h %2$d%%": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "7D %1$d%% · 5H %2$d%%"
           }
         }
       }
     },
-    "取消" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cancel"
+    "周 %1$d%% · 5h %2$d%% · 30d %3$d%%": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "7D %1$d%% · 5H %2$d%% · 30D %3$d%%"
           }
         }
       }
     },
-    "取消归档" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Unarchive"
+    "周%1$d%% 5h %2$d%%": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "W %1$d%% · 5H %2$d%%"
           }
         }
       }
     },
-    "启动" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Start"
+    "在 Finder 中显示": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reveal in Finder"
           }
         }
       }
     },
-    "启动 WorkBuddy" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Launch WorkBuddy"
+    "在菜单栏面板中显示该账号的加油包余额": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show this account's booster balance in the menu bar panel"
           }
         }
       }
     },
-    "启用检查更新" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enable Update Check"
+    "基本设置": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "General"
           }
         }
       }
     },
-    "启用自动归档" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enable Auto Archive"
+    "基础版": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Basic"
           }
         }
       }
     },
-    "周" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wk"
+    "复制": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copy"
           }
         }
       }
     },
-    "周 %1$d%% · 5h %2$d%%" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "7D %1$d%% · 5H %2$d%%"
+    "复制授权链接": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copy Authorization Link"
           }
         }
       }
     },
-    "周 %1$d%% · 5h %2$d%% · 30d %3$d%%" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "7D %1$d%% · 5H %2$d%% · 30D %3$d%%"
+    "复制错误信息": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copy Error Message"
           }
         }
       }
     },
-    "周%1$d%% 5h %2$d%%" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "W %1$d%% · 5H %2$d%%"
+    "外观主题": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Appearance"
           }
         }
       }
     },
-    "在 Finder 中显示" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reveal in Finder"
+    "外观样式": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Appearance"
           }
         }
       }
     },
-    "在菜单栏面板中显示该账号的加油包余额" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Show this account's booster balance in the menu bar panel"
+    "多账号": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Multi-Account"
           }
         }
       }
     },
-    "基本设置" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "General"
+    "多账号显示风格": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Multi-Account Style"
           }
         }
       }
     },
-    "基础版" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Basic"
+    "好": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
           }
         }
       }
     },
-    "复制" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Copy"
+    "如果你有更好的建议，欢迎去仓库提交 Issue 或 PR。": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Got a better idea? Issues and PRs are welcome in the repo."
           }
         }
       }
     },
-    "复制授权链接" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Copy Authorization Link"
+    "安装更新": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Install Update"
           }
         }
       }
     },
-    "复制错误信息" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Copy Error Message"
+    "完全开源，代码公开透明。": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fully open source, with transparent code."
           }
         }
       }
     },
-    "外观主题" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Appearance"
+    "官方砍掉了 server 服务，临时弃用。": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The official server service was removed. Temporarily deprecated."
           }
         }
       }
     },
-    "外观样式" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Appearance"
+    "实时预览": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Live Preview"
           }
         }
       }
     },
-    "多账号" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Multi-Account"
+    "将把「%1$@」的凭证写入 Kimi CLI，之后新启动的 CLI 会话将使用该账号。\n\n%2$@": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This will write the credentials of “%1$@” to Kimi CLI. New CLI sessions will use this account.\n\n%2$@"
           }
         }
       }
     },
-    "多账号显示风格" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Multi-Account Style"
+    "将该账号的凭证写入 Kimi CLI，更换 CLI 的登录账号": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Write this account’s credentials to Kimi CLI, changing the account the CLI logs in with."
           }
         }
       }
     },
-    "好" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "OK"
+    "已停止": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stopped"
           }
         }
       }
     },
-    "如果你有更好的建议，欢迎去仓库提交 Issue 或 PR。" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Got a better idea? Issues and PRs are welcome in the repo."
+    "已取消授权": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Authorization canceled"
           }
         }
       }
     },
-    "安装更新" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Install Update"
+    "已启用": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enabled"
           }
         }
       }
     },
-    "完全开源，代码公开透明。" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fully open source, with transparent code."
+    "已复制": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copied"
           }
         }
       }
     },
-    "官方砍掉了 server 服务，临时弃用。" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The official server service was removed. Temporarily deprecated."
+    "已归档": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Archived"
           }
         }
       }
     },
-    "实时预览" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Live Preview"
+    "已成功归档 %d 个会话。": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Archived %d sessions."
           }
         }
       }
     },
-    "将把「%1$@」的凭证写入 Kimi CLI，之后新启动的 CLI 会话将使用该账号。\n\n%2$@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "This will write the credentials of “%1$@” to Kimi CLI. New CLI sessions will use this account.\n\n%2$@"
+    "已授权 Kimi 账号": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kimi Account Authorized"
           }
         }
       }
     },
-    "将该账号的凭证写入 Kimi CLI，更换 CLI 的登录账号" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Write this account’s credentials to Kimi CLI, changing the account the CLI logs in with."
+    "已签到": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Checked in"
           }
         }
       }
     },
-    "已停止" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stopped"
+    "开启后，KimiCodeBar 会每小时检查一次本地 Kimi Code 会话，将超过保留期限且未归档的会话自动标记为归档。": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "When enabled, KimiCodeBar checks local Kimi Code sessions every hour and automatically archives sessions that have passed the retention period."
           }
         }
       }
     },
-    "已取消授权" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Authorization canceled"
+    "开机自动启动": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Launch at Login"
           }
         }
       }
     },
-    "已启用" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enabled"
+    "异常": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Error"
           }
         }
       }
     },
-    "已复制" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Copied"
+    "归档于 %@": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Archived %@"
           }
         }
       }
     },
-    "已归档" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Archived"
+    "归档完成": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Archive Complete"
           }
         }
       }
     },
-    "已成功归档 %d 个会话。" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Archived %d sessions."
+    "归档期限": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Archive After"
           }
         }
       }
     },
-    "已授权 Kimi 账号" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kimi Account Authorized"
+    "当前": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Active"
           }
         }
       }
     },
-    "已签到" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Checked in"
+    "当前最新": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Up to Date"
           }
         }
       }
     },
-    "开启后，KimiCodeBar 会每小时检查一次本地 Kimi Code 会话，将超过保留期限且未归档的会话自动标记为归档。" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "When enabled, KimiCodeBar checks local Kimi Code sessions every hour and automatically archives sessions that have passed the retention period."
+    "待归档": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pending"
           }
         }
       }
     },
-    "开机自动启动" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Launch at Login"
+    "忽略本次更新": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ignore This Version"
           }
         }
       }
     },
-    "异常" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Error"
+    "总对话": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Total"
           }
         }
       }
     },
-    "归档于 %@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Archived %@"
+    "手动填写 API Key": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enter an API Key manually"
           }
         }
       }
     },
-    "归档完成" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Archive Complete"
+    "打开": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open"
           }
         }
       }
     },
-    "归档期限" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Archive After"
+    "打开 DeepSeek 控制台": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open DeepSeek Console"
           }
         }
       }
     },
-    "当前" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Active"
+    "打开授权页": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open Authorization Page"
           }
         }
       }
     },
-    "当前最新" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Up to Date"
+    "技能包通常位于 ~/.kimi-code/skills/": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skill packages are usually located in ~/.kimi-code/skills/"
           }
         }
       }
     },
-    "待归档" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pending"
+    "技能管理": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skills"
           }
         }
       }
     },
-    "忽略本次更新" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ignore This Version"
+    "按住拖动排序": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Drag to reorder"
           }
         }
       }
     },
-    "总对话" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Total"
+    "授权已失效，请重新登录": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Authorization is no longer valid. Please sign in again."
           }
         }
       }
     },
-    "手动填写 API Key" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enter an API Key manually"
+    "授权服务返回错误（%1$@）：%2$@": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Authorization service returned an error (%1$@): %2$@"
           }
         }
       }
     },
-    "打开" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Open"
+    "授权登录": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sign in with Browser"
           }
         }
       }
     },
-    "打开 DeepSeek 控制台" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Open DeepSeek Console"
+    "授权登录或 API Key 登录": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sign in with browser or API Key"
           }
         }
       }
     },
-    "打开授权页" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Open Authorization Page"
+    "授权码": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Authorization Code"
           }
         }
       }
     },
-    "技能包通常位于 ~/.kimi-code/skills/" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Skill packages are usually located in ~/.kimi-code/skills/"
+    "授权码 %@": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Authorization code: %@"
           }
         }
       }
     },
-    "技能管理" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Skills"
+    "授权码已过期，请重新发起授权": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The authorization code expired. Please start a new authorization."
           }
         }
       }
     },
-    "按住拖动排序" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Drag to reorder"
+    "授权被拒绝": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Authorization was denied"
           }
         }
       }
     },
-    "授权已失效，请重新登录" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Authorization is no longer valid. Please sign in again."
+    "授权请求地址无效": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Invalid authorization request URL"
           }
         }
       }
     },
-    "授权服务返回错误（%1$@）：%2$@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Authorization service returned an error (%1$@): %2$@"
+    "授权超时，请重新发起授权": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Authorization timed out. Please start a new authorization."
           }
         }
       }
     },
-    "授权登录" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sign in with Browser"
+    "控制台": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Console"
           }
         }
       }
     },
-    "授权登录或 API Key 登录" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sign in with browser or API Key"
+    "提交反馈": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Send Feedback"
           }
         }
       }
     },
-    "授权码" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Authorization Code"
+    "数据仅本地存储，所有 API 只与 Kimi 官方通信，代码全部开源可审计。": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Data is stored locally only. All requests go directly to Kimi's official APIs, and the code is fully open source."
           }
         }
       }
     },
-    "授权码 %@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Authorization code: %@"
+    "新版": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New Version"
           }
         }
       }
     },
-    "授权码已过期，请重新发起授权" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The authorization code expired. Please start a new authorization."
+    "新版本的 KimiCode 已经发布": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A new version of KimiCode is available"
           }
         }
       }
     },
-    "授权被拒绝" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Authorization was denied"
+    "无法写入 CLI 凭证文件：%@": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Failed to write the CLI credentials file: %@"
           }
         }
       }
     },
-    "授权请求地址无效" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Invalid authorization request URL"
+    "无法解析 API 返回数据": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unable to parse the API response"
           }
         }
       }
     },
-    "授权超时，请重新发起授权" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Authorization timed out. Please start a new authorization."
+    "无法解析授权服务返回数据": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unable to parse the authorization service response"
           }
         }
       }
     },
-    "控制台" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Console"
+    "无法读取会话目录：%@": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unable to read session directory: %@"
           }
         }
       }
     },
-    "提交反馈" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Send Feedback"
+    "无限制": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unlimited"
           }
         }
       }
     },
-    "数据仅本地存储，所有 API 只与 Kimi 官方通信，代码全部开源可审计。" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Data is stored locally only. All requests go directly to Kimi's official APIs, and the code is fully open source."
+    "无需输入，自动读取": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No input needed, auto-detect"
           }
         }
       }
     },
-    "新版" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "New Version"
+    "日志接口请求失败：%@": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Changelog API request failed: %@"
           }
         }
       }
     },
-    "新版本的 KimiCode 已经发布" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "A new version of KimiCode is available"
+    "日志接口返回内容中未找到版本信息": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No version information found in the changelog API response"
           }
         }
       }
     },
-    "无法写入 CLI 凭证文件：%@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Failed to write the CLI credentials file: %@"
+    "日志接口返回内容无法解析": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unable to parse the changelog API response"
           }
         }
       }
     },
-    "无法解析 API 返回数据" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Unable to parse the API response"
+    "日志接口返回异常状态码：%@": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The changelog API returned an unexpected status code: %@"
           }
         }
       }
     },
-    "无法解析授权服务返回数据" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Unable to parse the authorization service response"
+    "显示 API Key": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show API Key"
           }
         }
       }
     },
-    "无法读取会话目录：%@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Unable to read session directory: %@"
+    "显示样式": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Display Style"
           }
         }
       }
     },
-    "无限制" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Unlimited"
+    "暂无会话记录": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Session Records"
           }
         }
       }
     },
-    "无需输入，自动读取" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No input needed, auto-detect"
+    "暂无余额数据": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No balance data"
           }
         }
       }
     },
-    "日志接口请求失败：%@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Changelog API request failed: %@"
+    "暂无已安装技能": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Skills Installed"
           }
         }
       }
     },
-    "日志接口返回内容中未找到版本信息" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No version information found in the changelog API response"
+    "暂无更新记录。": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No update history available."
           }
         }
       }
     },
-    "日志接口返回内容无法解析" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Unable to parse the changelog API response"
+    "暂无符合条件的会话": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Sessions to Archive"
           }
         }
       }
     },
-    "日志接口返回异常状态码：%@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The changelog API returned an unexpected status code: %@"
+    "更新于 %@": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Updated %@"
           }
         }
       }
     },
-    "显示 API Key" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Show API Key"
+    "更新内容": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What's New"
           }
         }
       }
     },
-    "显示样式" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Display Style"
+    "更新到 %@": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Update to %@"
           }
         }
       }
     },
-    "暂无会话记录" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No Session Records"
+    "月之亮面": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Light"
           }
         }
       }
     },
-    "暂无余额数据" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No balance data"
+    "月之暗面": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dark"
           }
         }
       }
     },
-    "暂无已安装技能" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No Skills Installed"
+    "服务未运行": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Service is not running"
           }
         }
       }
     },
-    "暂无更新记录。" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No update history available."
+    "未启用": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disabled"
           }
         }
       }
     },
-    "暂无符合条件的会话" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No Sessions to Archive"
+    "未归档": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unarchived"
           }
         }
       }
     },
-    "更新于 %@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Updated %@"
+    "未授权": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not Authorized"
           }
         }
       }
     },
-    "更新内容" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "What's New"
+    "未检测到": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not Detected"
           }
         }
       }
     },
-    "更新到 %@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Update to %@"
+    "未检测到 WorkBuddy 登录信息，请先在 WorkBuddy 中登录": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No WorkBuddy login found. Please sign in to WorkBuddy first."
           }
         }
       }
     },
-    "月之亮面" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Light"
+    "未登录": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not Signed In"
           }
         }
       }
     },
-    "月之暗面" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dark"
+    "未知": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unknown"
           }
         }
       }
     },
-    "服务未运行" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Service is not running"
+    "本周用量": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weekly Usage"
           }
         }
       }
     },
-    "未启用" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Disabled"
+    "本月用量": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Monthly Usage"
           }
         }
       }
     },
-    "未归档" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Unarchived"
+    "本月消费": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spent This Month"
           }
         }
       }
     },
-    "未授权" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Not Authorized"
+    "极简": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Minimal"
           }
         }
       }
     },
-    "未检测到" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Not Detected"
+    "查看仓库": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "View Repository"
           }
         }
       }
     },
-    "未检测到 WorkBuddy 登录信息，请先在 WorkBuddy 中登录" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No WorkBuddy login found. Please sign in to WorkBuddy first."
+    "查看更新": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "View Updates"
           }
         }
       }
     },
-    "未登录" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Not Signed In"
+    "检查更新…": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check for Updates…"
           }
         }
       }
     },
-    "未知" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Unknown"
+    "检查更新失败": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Update Check Failed"
           }
         }
       }
     },
-    "本周用量" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Weekly Usage"
+    "检查更新接口错误反馈": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Update check API error report"
           }
         }
       }
     },
-    "本月用量" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Monthly Usage"
+    "检查更新间隔": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Update Check Interval"
           }
         }
       }
     },
-    "本月消费" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Spent This Month"
+    "检测中": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Checking"
           }
         }
       }
     },
-    "极简" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Minimal"
+    "检测中…": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Checking…"
           }
         }
       }
     },
-    "查看仓库" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "View Repository"
+    "检测到正在运行的 Kimi Code 会话：切换对它们不生效，且它们刷新登录状态时可能覆盖本次切换，建议先退出。": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Running Kimi Code sessions detected: the switch does not affect them, and they may overwrite this switch when refreshing their login. Quit them first if possible."
           }
         }
       }
     },
-    "查看更新" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "View Updates"
+    "欢迎 Star、提交 Issue 或参与共建，让这款工具变得更好。": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stars, issues, and contributions are welcome—help make it better."
           }
         }
       }
     },
-    "检查更新…" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Check for Updates…"
+    "正在加载内容…": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Loading content…"
           }
         }
       }
     },
-    "检查更新失败" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Update Check Failed"
+    "正在加载技能…": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Loading skills…"
           }
         }
       }
     },
-    "检查更新接口错误反馈" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Update check API error report"
+    "正在加载更新内容…": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Loading release notes…"
           }
         }
       }
     },
-    "检查更新间隔" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Update Check Interval"
+    "每一个 PR 都欢迎，期待在这里看到你的名字": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Every PR is welcome. We hope to see your name here."
           }
         }
       }
     },
-    "检测中" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Checking"
+    "没有符合条件的会话": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No matching sessions"
           }
         }
       }
     },
-    "检测中…" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Checking…"
+    "浏览器一键授权": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "One-click authorization in your browser"
           }
         }
       }
     },
-    "检测到正在运行的 Kimi Code 会话：切换对它们不生效，且它们刷新登录状态时可能覆盖本次切换，建议先退出。" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Running Kimi Code sessions detected: the switch does not affect them, and they may overwrite this switch when refreshing their login. Quit them first if possible."
+    "浏览器授权，推荐": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Browser authorization (recommended)"
           }
         }
       }
     },
-    "欢迎 Star、提交 Issue 或参与共建，让这款工具变得更好。" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Stars, issues, and contributions are welcome—help make it better."
+    "添加失败": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add Failed"
           }
         }
       }
     },
-    "正在加载内容…" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Loading content…"
+    "添加账号": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add Account"
           }
         }
       }
     },
-    "正在加载技能…" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Loading skills…"
+    "添加账号后，即可在菜单栏查看各账号的配额使用情况": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add an account to view each account's quota usage in the menu bar."
           }
         }
       }
     },
-    "正在加载更新内容…" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Loading release notes…"
+    "点击下方按钮将在默认浏览器中打开 Google 授权页面，授权完成后自动添加该 Antigravity 账号。": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Click the button below to open Google authorization in your default browser. The Antigravity account will be added automatically once authorized."
           }
         }
       }
     },
-    "每一个 PR 都欢迎，期待在这里看到你的名字" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Every PR is welcome. We hope to see your name here."
+    "版本 %@": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version %@"
           }
         }
       }
     },
-    "没有符合条件的会话" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No matching sessions"
+    "版本接口请求失败：%@": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version API request failed: %@"
           }
         }
       }
     },
-    "浏览器一键授权" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "One-click authorization in your browser"
+    "版本接口返回内容中未找到版本号": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No version number found in the version API response"
           }
         }
       }
     },
-    "浏览器授权，推荐" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Browser authorization (recommended)"
+    "版本接口返回内容无法解析": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unable to parse the version API response"
           }
         }
       }
     },
-    "添加失败" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Add Failed"
+    "版本接口返回异常状态码：%@": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The version API returned an unexpected status code: %@"
           }
         }
       }
     },
-    "添加账号" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Add Account"
+    "登录 Google 账号": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sign in with Google"
           }
         }
       }
     },
-    "添加账号后，即可在菜单栏查看各账号的配额使用情况" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Add an account to view each account's quota usage in the menu bar."
+    "登录后查看 Kimi 用量": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sign in to view your Kimi usage"
           }
         }
       }
     },
-    "点击下方按钮将在默认浏览器中打开 Google 授权页面，授权完成后自动添加该 Antigravity 账号。" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Click the button below to open Google authorization in your default browser. The Antigravity account will be added automatically once authorized."
+    "登录失效": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Session Expired"
           }
         }
       }
     },
-    "版本 %@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Version %@"
+    "登录失效，请到设置-多账号重新授权": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Session expired. Go to Settings > Multi-Account to re-authorize."
           }
         }
       }
     },
-    "版本接口请求失败：%@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Version API request failed: %@"
+    "登录失效，请到设置-账号管理处理": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Session expired. Go to Settings > Account Management to fix it."
           }
         }
       }
     },
-    "版本接口返回内容中未找到版本号" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No version number found in the version API response"
+    "登录方式": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sign-in Method"
           }
         }
       }
     },
-    "版本接口返回内容无法解析" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Unable to parse the version API response"
+    "确定": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
           }
         }
       }
     },
-    "版本接口返回异常状态码：%@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "The version API returned an unexpected status code: %@"
+    "确定删除「%1$@」吗？只会从 Bar 中移除该账号，不影响 WorkBuddy 客户端的登录状态。": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Are you sure you want to delete “%1$@”? This only removes the account from the Bar and does not affect the WorkBuddy client’s sign-in."
           }
         }
       }
     },
-    "登录 Google 账号" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sign in with Google"
+    "确定删除「%1$@」吗？只会删除 Bar 中保存的授权，不影响 Kimi CLI 的登录状态。": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Are you sure you want to delete “%1$@”? This only removes the authorization saved in the Bar and does not affect Kimi CLI sign-in."
           }
         }
       }
     },
-    "登录后查看 Kimi 用量" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sign in to view your Kimi usage"
+    "确认新增": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Confirm Add"
           }
         }
       }
     },
-    "登录失效" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Session Expired"
+    "社区版": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "GitHub"
           }
         }
       }
     },
-    "登录失效，请到设置-多账号重新授权" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Session expired. Go to Settings > Multi-Account to re-authorize."
+    "稍后再说": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Later"
           }
         }
       }
     },
-    "登录失效，请到设置-账号管理处理" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Session expired. Go to Settings > Account Management to fix it."
+    "立即归档 %d 个会话": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Archive %d Sessions Now"
           }
         }
       }
     },
-    "登录方式" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sign-in Method"
+    "立即扫描": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scan Now"
           }
         }
       }
     },
-    "确定" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "OK"
+    "立即重启": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restart Now"
           }
         }
       }
     },
-    "确定删除「%1$@」吗？只会从 Bar 中移除该账号，不影响 WorkBuddy 客户端的登录状态。" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Are you sure you want to delete “%1$@”? This only removes the account from the Bar and does not affect the WorkBuddy client’s sign-in."
+    "等待授权…": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for authorization…"
           }
         }
       }
     },
-    "确定删除「%1$@」吗？只会删除 Bar 中保存的授权，不影响 Kimi CLI 的登录状态。" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Are you sure you want to delete “%1$@”? This only removes the authorization saved in the Bar and does not affect Kimi CLI sign-in."
+    "等待授权中": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for authorization"
           }
         }
       }
     },
-    "确认新增" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Confirm Add"
+    "等待浏览器授权…": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for browser authorization…"
           }
         }
       }
     },
-    "社区版" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "GitHub"
+    "累计": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Total"
           }
         }
       }
     },
-    "稍后再说" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Later"
+    "累计使用 Token": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Total Token Used"
           }
         }
       }
     },
-    "立即归档 %d 个会话" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Archive %d Sessions Now"
+    "经典": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Classic"
           }
         }
       }
     },
-    "立即扫描" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Scan Now"
+    "缓存命中率": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cache Hit Rate"
           }
         }
       }
     },
-    "立即重启" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Restart Now"
+    "网络错误：%@": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Network error: %@"
           }
         }
       }
     },
-    "等待授权…" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Waiting for authorization…"
+    "自动归档": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Archive"
           }
         }
       }
     },
-    "等待授权中" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Waiting for authorization"
+    "获取 API Key": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Get API Key"
           }
         }
       }
     },
-    "等待浏览器授权…" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Waiting for browser authorization…"
+    "菜单栏样式": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menu Bar Style"
           }
         }
       }
     },
-    "累计" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Total"
+    "设为主账号": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set as Primary"
           }
         }
       }
     },
-    "累计使用 Token" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Total Token Used"
+    "设置": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
           }
         }
       }
     },
-    "经典" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Classic"
+    "该 API Key 已添加，无需重复添加": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This API Key has already been added"
           }
         }
       }
     },
-    "缓存命中率" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cache Hit Rate"
+    "该 Google 账号已添加，无需重复添加": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This Google account has already been added."
           }
         }
       }
     },
-    "网络错误：%@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Network error: %@"
+    "该账号已添加，无需重复授权": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This account has already been added. No need to authorize again."
           }
         }
       }
     },
-    "自动归档" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Archive"
+    "该账号已添加，无需重复添加": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This account has already been added."
           }
         }
       }
     },
-    "获取 API Key" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Get API Key"
+    "语言": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Language"
           }
         }
       }
     },
-    "菜单栏样式" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Menu Bar Style"
+    "请求地址无效": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Invalid request URL"
           }
         }
       }
     },
-    "设为主账号" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Set as Primary"
+    "请输入 API Key": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Please enter your API Key"
           }
         }
       }
     },
-    "设置" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Settings"
+    "读取中…": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reading…"
           }
         }
       }
     },
-    "该 API Key 已添加，无需重复添加" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "This API Key has already been added"
+    "读取本地": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Read Local"
           }
         }
       }
     },
-    "该 Google 账号已添加，无需重复添加" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "This Google account has already been added."
+    "贡献者": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contributors"
           }
         }
       }
     },
-    "该账号已添加，无需重复授权" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "This account has already been added. No need to authorize again."
+    "账号 %1$d": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Account %1$d"
           }
         }
       }
     },
-    "该账号已添加，无需重复添加" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "This account has already been added."
+    "账号列表": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Account List"
           }
         }
       }
     },
-    "语言" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Language"
+    "账号用于在 Bar 中查看配额；「切换账号」会把该账号的凭证写入 Kimi CLI，更换 CLI 的登录账号。": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Accounts are used to view quotas in Bar. “Switch Account” writes the account's credentials to Kimi CLI, changing the account the CLI logs in with."
           }
         }
       }
     },
-    "请求地址无效" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Invalid request URL"
+    "账号管理": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Account"
           }
         }
       }
     },
-    "请输入 API Key" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Please enter your API Key"
+    "赠送余额": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Granted Balance"
           }
         }
       }
     },
-    "读取中…" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reading..."
+    "超过保留期限的会话将被自动归档": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sessions past the retention period will be archived automatically"
           }
         }
       }
     },
-    "读取本地" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Read locally"
+    "超过该时间未更新的会话会被归档": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sessions not updated within this period will be archived"
           }
         }
       }
     },
-    "贡献者" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Contributors"
+    "跟随系统": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "System"
           }
         }
       }
     },
-    "账号 %1$d" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Account %1$d"
+    "输入 DeepSeek API Key": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enter DeepSeek API Key"
           }
         }
       }
     },
-    "账号列表" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Account List"
+    "输入新的 API Key，验证通过后立即生效。": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enter a new API Key. It takes effect once verified."
           }
         }
       }
     },
-    "账号用于在 Bar 中查看配额；「切换账号」会把该账号的凭证写入 Kimi CLI，更换 CLI 的登录账号。" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Accounts are used to view quotas in Bar. “Switch Account” writes the account's credentials to Kimi CLI, changing the account the CLI logs in with."
+    "运行中": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Running"
           }
         }
       }
     },
-    "账号管理" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Account"
+    "暂无记录": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Records"
           }
         }
       }
     },
-    "赠送余额" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Granted Balance"
+    "近期更新日志": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recent Updates"
           }
         }
       }
     },
-    "超过保留期限的会话将被自动归档" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sessions past the retention period will be archived automatically"
+    "还没有添加账号": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Accounts Added Yet"
           }
         }
       }
     },
-    "超过该时间未更新的会话会被归档" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sessions not updated within this period will be archived"
+    "进阶版": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Intermediate"
           }
         }
       }
     },
-    "跟随系统" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "System"
+    "退出": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quit"
           }
         }
       }
     },
-    "输入 DeepSeek API Key" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enter DeepSeek API Key"
+    "退出登录": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sign Out"
           }
         }
       }
     },
-    "输入新的 API Key，验证通过后立即生效。" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enter a new API Key. It takes effect once verified."
+    "选择上方技能以预览内容": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Select a skill above to preview its content"
           }
         }
       }
     },
-    "运行中" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Running"
+    "选择平台": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Select Platform"
           }
         }
       }
     },
-    "暂无记录" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No Records"
+    "选择平台与登录方式": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Select platform and sign-in method"
           }
         }
       }
     },
-    "近期更新日志" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recent Updates"
+    "选择添加方式": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose How to Add"
           }
         }
       }
     },
-    "还没有添加账号" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No Accounts Added Yet"
+    "选择登录方式": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Select Sign-in Method"
           }
         }
       }
     },
-    "进阶版" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Intermediate"
+    "通过浏览器授权添加一个 Kimi 账号": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Authorize in your browser to add a Kimi account."
           }
         }
       }
     },
-    "退出" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Quit"
+    "重启": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restart"
           }
         }
       }
     },
-    "退出登录" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sign Out"
+    "重启 WorkBuddy": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restart WorkBuddy"
           }
         }
       }
     },
-    "选择上方技能以预览内容" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Select a skill above to preview its content"
+    "重启完成更新": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restart to Update"
           }
         }
       }
     },
-    "选择平台" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Select Platform"
+    "重命名": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rename"
           }
         }
       }
     },
-    "选择平台与登录方式" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Select platform and sign-in method"
+    "重命名账号": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rename Account"
           }
         }
       }
     },
-    "选择添加方式" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Choose How to Add"
+    "重新授权": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Re-authorize"
           }
         }
       }
     },
-    "选择登录方式" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Select Sign-in Method"
+    "量身定制": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tailor-Made"
           }
         }
       }
     },
-    "通过浏览器授权添加一个 Kimi 账号" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Authorize in your browser to add a Kimi account."
+    "隐私安全": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privacy & Security"
           }
         }
       }
     },
-    "重启" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Restart"
+    "隐藏 API Key": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hide API Key"
           }
         }
       }
     },
-    "重启 WorkBuddy" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Restart WorkBuddy"
+    "面板自定义": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Panel Customization"
           }
         }
       }
     },
-    "重启完成更新" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Restart to Update"
+    "额度刷新间隔": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quota Refresh Interval"
           }
         }
       }
     },
-    "重命名" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rename"
+    "验证中…": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verifying…"
           }
         }
       }
     },
-    "重命名账号" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rename Account"
+    "高级版": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Advanced"
           }
         }
       }
     },
-    "重新授权" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Re-authorize"
+    "默认样式": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Default"
           }
         }
       }
     },
-    "量身定制" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tailor-Made"
+    "浏览器授权登录（推荐）": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sign in with Browser (Recommended)"
           }
         }
       }
     },
-    "隐私安全" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Privacy & Security"
+    "开始授权": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start Authorization"
           }
         }
       }
     },
-    "隐藏 API Key" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hide API Key"
+    "授权中…": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Authorizing…"
           }
         }
       }
     },
-    "面板自定义" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Panel Customization"
+    "将在系统私密浏览窗口中打开 WorkBuddy 登录页，登录任意账号后自动添加。token 失效时可用同样方式重新授权。": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opens the WorkBuddy sign-in page in a private system browser window. Sign in to any account and it will be added automatically. Re-authorize the same way when tokens expire."
           }
         }
       }
     },
-    "额度刷新间隔" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Quota Refresh Interval"
+    "从 WorkBuddy 桌面端读取": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Read from WorkBuddy Desktop"
           }
         }
       }
     },
-    "验证中…" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verifying…"
+    "需先在 WorkBuddy 客户端登录目标账号，再点下方按钮读取本地登录信息。": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sign in to the target account in the WorkBuddy client first, then click the button below to read local credentials."
           }
         }
       }
     },
-    "高级版" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Advanced"
+    "通过浏览器重新登录该 WorkBuddy 账号": {
+      "extractionState": "stale",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Re-authorize this WorkBuddy account via browser"
           }
         }
       }
     },
-    "默认样式" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Default"
+    "Token 速度": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Token Speed"
           }
         }
       }
     },
-    "浏览器授权登录（推荐）" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sign in with Browser (Recommended)"
+    "平均输出速度": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avg output speed"
           }
         }
       }
     },
-    "开始授权" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Start Authorization"
+    "平均首Token延迟": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avg first-token latency"
           }
         }
       }
     },
-    "授权中…" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Authorizing…"
+    "实时": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Live"
           }
         }
       }
     },
-    "将在系统私密浏览窗口中打开 WorkBuddy 登录页，登录任意账号后自动添加。token 失效时可用同样方式重新授权。" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Opens the WorkBuddy sign-in page in a private system browser window. Sign in to any account and it will be added automatically. Re-authorize the same way when tokens expire."
+    "生成中": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Generating"
           }
         }
       }
     },
-    "从 WorkBuddy 桌面端读取" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Read from WorkBuddy Desktop"
+    "空闲": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Idle"
           }
         }
       }
     },
-    "需先在 WorkBuddy 客户端登录目标账号，再点下方按钮读取本地登录信息。" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sign in to the target account in the WorkBuddy client first, then click the button below to read local credentials."
+    "未检测到本地服务": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Local server not detected"
           }
         }
       }
     },
-    "读取本地" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Read Local"
+    "主会话": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Main session"
           }
         }
       }
     },
-    "读取中…" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reading…"
+    "子代理 %1$@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Subagent %1$@"
           }
         }
       }
     },
-    "通过浏览器重新登录该 WorkBuddy 账号" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Re-authorize this WorkBuddy account via browser"
+    "已生成 %1$@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Running for %1$@"
           }
         }
       }
     }
   },
-  "version" : "1.0"
+  "version": "1.0"
 }

@@ -1129,6 +1129,13 @@ struct KimiMenu: View {
                     LocalUsageCard()
                 }
 
+                // Token 速度卡片：周期统计（wire.jsonl step.end 增量扫描）+
+                // 实时速度（本地服务 WebSocket delta 流估算，含子 agent）。
+                // 实时区只在面板打开时连接本地服务，面板关闭即断开。
+                if model.showLocalUsageCard {
+                    TokenSpeedCard()
+                }
+
                 // Kimi Web 卡片及重启提示条临时屏蔽（2026-07）：Kimi 官方将 Kimi Web 改为
                 // 纯前端展示，且移除了 web kill 等管理命令，启停管理失去意义。
                 // KimiServerCard / KimiServerRestartHint / startKimiServer / stopKimiServer
@@ -1264,6 +1271,8 @@ struct KimiMenu: View {
                 SparkleUpdater.shared.checkForUpdateInformation()
                 // 面板打开时扫描一次本机消耗量（后台线程，增量扫描开销极低，每次打开都统计保证实时）
                 KimiLocalUsageService.shared.refreshIfNeeded()
+                // 面板打开时启动 Token 速度实时连接（WebSocket delta 流）
+                KimiLiveSpeedService.shared.start()
                 // 基于缓存快速判断是否需要弹窗
                 model.checkCachedKimiUpdate()
                 if model.pendingUpdateVersion != nil {
@@ -1278,6 +1287,9 @@ struct KimiMenu: View {
                         showUpdateAlert = false
                     }
                 }
+            } else {
+                // 面板关闭：断开 Token 速度实时连接
+                KimiLiveSpeedService.shared.stop()
             }
         }
         .popover(isPresented: $showUpdateAlert, arrowEdge: .trailing) {
