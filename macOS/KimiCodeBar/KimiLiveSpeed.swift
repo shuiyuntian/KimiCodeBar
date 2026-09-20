@@ -136,6 +136,8 @@ private extension KimiLiveSpeedService {
         /// 60 秒速度时间线环形缓冲（按下标 = 秒 % 60 归桶，timelineSeconds 校验有效期）
         private var timelineTokens = [Double](repeating: 0, count: 60)
         private var timelineSeconds = [Int](repeating: -1, count: 60)
+        /// frameId → kind 映射（frame.upsert 建立，append 据此过滤工具输出）
+        private var frameKinds: [String: String] = [:]
 
         func start(_ onUpdate: @escaping @Sendable (KimiLiveSpeedSnapshot) -> Void) {
             self.onUpdate = onUpdate
@@ -292,9 +294,20 @@ private extension KimiLiveSpeedService {
             for op in ops {
                 guard let opType = op["op"] as? String else { continue }
                 switch opType {
+                case "frame.upsert":
+                    // 记录 frameId → kind 映射：append 需要据此区分模型输出与工具输出
+                    guard let frame = op["frame"] as? [String: Any],
+                          let frameId = frame["frameId"] as? String,
+                          let kind = frame["kind"] as? String else { continue }
+                    frameKinds["\(sessionId)|\(frameId)"] = kind
                 case "append":
-                    // 流式文本增量：thinking / 正文 / 工具参数都经此下发
+                    // 流式文本增量：只统计模型输出 frame（thinking / 文本），
+                    // 工具 frame 的 append 是命令输出/进度（如后台任务 stdout），不计入速度
                     guard let text = op["text"] as? String, !text.isEmpty else { continue }
+                    let target = op["target"] as? [String: Any]
+                    let frameKey = target?["frameId"].flatMap { "\(sessionId)|\($0)" } ?? ""
+                    let kind = frameKinds[frameKey]
+                    guard kind == nil || kind == "thinking" || kind == "text" else { continue }
                     recordDelta("\(sessionId)|\(agentId)", text: text, at: now)
                     hasDelta = true
                 case "step.upsert":
@@ -307,7 +320,7 @@ private extension KimiLiveSpeedService {
             if hasDelta { publishThrottled() }
         }
 
-        /// step.upsert：running 记录进行中状态；completed 提取服务端精确速度与首 Token 延迟
+        /// step.upsert：running 记录进行中状态；终态（含取消/中断/失败）清理进行中并提取精确数据
         private func handleStepUpsert(sessionId: String, agentId: String, step: [String: Any], at now: Date) {
             let key = "\(sessionId)|\(agentId)"
             let state = step["state"] as? String
@@ -327,7 +340,7 @@ private extension KimiLiveSpeedService {
                 return
             }
 
-            guard state == "completed" else { return }
+            guard state == "completed" || state == "cancelled" || state == "interrupted" || state == "failed" else { return }
             if var tracker = trackers[key] {
                 tracker.inFlightSince = nil
                 tracker.samples.removeAll()
@@ -617,10 +630,14 @@ private extension KimiLiveSpeedService {
         }
 
         private func buildSnapshot(now: Date, forcedState: KimiLiveSpeedState?) -> KimiLiveSpeedSnapshot {
-            // 清理长期无活动的 tracker
+            // 清理长期无活动的 tracker；进行中状态超过 60s 无流量也视为已结束（兜底防粘滞）
             for key in trackers.keys {
                 guard let tracker = trackers[key] else { continue }
-                if tracker.inFlightSince == nil, now.timeIntervalSince(tracker.lastActivity) > pruneSeconds {
+                let inactive = now.timeIntervalSince(tracker.lastActivity)
+                if inactive > 60, tracker.inFlightSince != nil {
+                    trackers[key]?.inFlightSince = nil
+                }
+                if tracker.inFlightSince == nil, inactive > pruneSeconds {
                     trackers.removeValue(forKey: key)
                     subscribed.remove(key)
                 }
