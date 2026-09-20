@@ -260,15 +260,109 @@ private extension KimiLiveSpeedService {
                 Task { await self.bootstrapSubscriptions() }
             case "ping":
                 send(["type": "pong"])
+            case "transcript.ops":
+                // delta 级转录流：增量操作数组（2.0.x 实测帧类型，asyncapi 未完整列出）
+                if let payload = msg["payload"] as? [String: Any] {
+                    handleTranscriptOps(payload)
+                }
             case "session_event":
+                // 会话级事件（子代理生命周期等；当前版本可能不下发，保留兼容）
                 if let payload = msg["payload"] as? [String: Any] {
                     handleSessionEvent(payload, sessionId: msg["session_id"] as? String)
                 }
+            case "transcript.reset":
+                // 转录快照重置：无需处理，后续 ops 会继续到达
+                break
             case "resync_required", "error":
                 queue.async { self.handleDisconnect() }
             default:
                 break
             }
+        }
+
+        /// 处理 transcript.ops：append（流式文本增量）与 step.upsert（step 状态/精确数据）
+        private func handleTranscriptOps(_ payload: [String: Any]) {
+            let now = Date()
+            let agentId = payload["agent_id"] as? String ?? "main"
+            guard let sessionId = payload["session_id"] as? String,
+                  let ops = payload["ops"] as? [[String: Any]] else { return }
+            var hasDelta = false
+
+            for op in ops {
+                guard let opType = op["op"] as? String else { continue }
+                switch opType {
+                case "append":
+                    // 流式文本增量：thinking / 正文 / 工具参数都经此下发
+                    guard let text = op["text"] as? String, !text.isEmpty else { continue }
+                    recordDelta("\(sessionId)|\(agentId)", text: text, at: now)
+                    hasDelta = true
+                case "step.upsert":
+                    guard let step = op["step"] as? [String: Any] else { continue }
+                    handleStepUpsert(sessionId: sessionId, agentId: agentId, step: step, at: now)
+                default:
+                    break
+                }
+            }
+            if hasDelta { publishThrottled() }
+        }
+
+        /// step.upsert：running 记录进行中状态；completed 提取服务端精确速度与首 Token 延迟
+        private func handleStepUpsert(sessionId: String, agentId: String, step: [String: Any], at now: Date) {
+            let key = "\(sessionId)|\(agentId)"
+            let state = step["state"] as? String
+
+            if state == "running" {
+                if trackers[key] == nil {
+                    trackers[key] = Tracker(sessionId: sessionId, label: "", isSub: agentId != "main")
+                }
+                if let startedAt = step["startedAt"] as? String,
+                   let started = Self.isoDate(startedAt) {
+                    trackers[key]?.inFlightSince = started
+                } else {
+                    trackers[key]?.inFlightSince = now
+                }
+                trackers[key]?.lastActivity = now
+                publishThrottled()
+                return
+            }
+
+            guard state == "completed" else { return }
+            if var tracker = trackers[key] {
+                tracker.inFlightSince = nil
+                tracker.samples.removeAll()
+                tracker.lastActivity = now
+                let output = (step["usage"] as? [String: Any]).flatMap { ($0["output"] as? NSNumber)?.intValue } ?? 0
+                let timing = step["timing"] as? [String: Any]
+                let streamMs = (timing?["llmStreamDurationMs"] as? NSNumber)?.intValue ?? 0
+                if output > 0, streamMs > 0 {
+                    tracker.lastStepSpeed = Double(output) / (Double(streamMs) / 1000)
+                    tracker.lastStepTTFTMs = (timing?["llmFirstTokenLatencyMs"] as? NSNumber).map { Double($0.intValue) }
+                } else {
+                    // 无 usage/timing 时 REST 兜底
+                    Task {
+                        if let step = await KimiServerClient.fetchLatestCompletedStep(
+                            sessionId: sessionId, agentId: agentId
+                        ) {
+                            self.queue.async {
+                                self.trackers[key]?.lastStepSpeed = step.tokensPerSec
+                                self.trackers[key]?.lastStepTTFTMs = Double(step.ttftMs)
+                            }
+                        }
+                    }
+                }
+                trackers[key] = tracker
+                publishThrottled()
+            }
+        }
+
+        private static let isoFormatter: ISO8601DateFormatter = {
+            let f = ISO8601DateFormatter()
+            f.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+            return f
+        }()
+
+        private static func isoDate(_ string: String) -> Date? {
+            isoFormatter.date(from: string) ?? ISO8601DateFormatter().date(from: string)
         }
 
         // MARK: 事件处理
@@ -471,7 +565,7 @@ private extension KimiLiveSpeedService {
             timer.resume()
         }
 
-        /// 对账：周期性发现新活跃会话并补订阅（防丢事件）
+        /// 对账：周期性发现新活跃会话并补订阅（防丢事件），已订阅会话重拉 agent 列表兜住子代理
         private func startReconcileTimer() {
             reconcile?.cancel()
             let timer = DispatchSource.makeTimerSource(queue: queue)
@@ -481,8 +575,12 @@ private extension KimiLiveSpeedService {
                 Task {
                     let sessionIds = await KimiServerClient.fetchActiveSessions()
                     guard !self.stopped else { return }
-                    for sessionId in sessionIds where !self.subscribedSessions.contains(sessionId) {
-                        await self.addSession(sessionId)
+                    for sessionId in sessionIds {
+                        if self.subscribedSessions.contains(sessionId) {
+                            await self.addSession(sessionId, refetch: true)
+                        } else {
+                            await self.addSession(sessionId)
+                        }
                     }
                 }
             }
