@@ -261,9 +261,10 @@ private extension KimiLiveSpeedService {
             case "ping":
                 send(["type": "pong"])
             case "transcript.ops":
-                // delta 级转录流：增量操作数组（2.0.x 实测帧类型，asyncapi 未完整列出）
+                // delta 级转录流：增量操作数组（2.0.x 实测帧类型，asyncapi 未完整列出）。
+                // 注意 session_id 在 envelope 层，ops 数据在内层 payload。
                 if let payload = msg["payload"] as? [String: Any] {
-                    handleTranscriptOps(payload)
+                    handleTranscriptOps(payload, sessionId: msg["session_id"] as? String)
                 }
             case "session_event":
                 // 会话级事件（子代理生命周期等；当前版本可能不下发，保留兼容）
@@ -281,10 +282,10 @@ private extension KimiLiveSpeedService {
         }
 
         /// 处理 transcript.ops：append（流式文本增量）与 step.upsert（step 状态/精确数据）
-        private func handleTranscriptOps(_ payload: [String: Any]) {
+        private func handleTranscriptOps(_ payload: [String: Any], sessionId: String?) {
             let now = Date()
             let agentId = payload["agent_id"] as? String ?? "main"
-            guard let sessionId = payload["session_id"] as? String,
+            guard let sessionId,
                   let ops = payload["ops"] as? [[String: Any]] else { return }
             var hasDelta = false
 
